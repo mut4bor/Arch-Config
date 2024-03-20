@@ -111,7 +111,7 @@ gestures {
 
 
 
-### Binds
+0;9u### Binds
 $mainMod = SUPER
 
 ## Basic binds
@@ -119,13 +119,12 @@ bind = $mainMod, Q, exec, kitty                                           # Open
 bind = $mainMod SHIFT, X, killactive,                                     # Close focused window
 bind = $mainMod, F, exec, thunar                                          # Open thunar (graphical file browser)
 bind = $mainMod, V, togglefloating                                        # Make focused window floating
-bind = $mainMod, TAB, exec, ~/.config/rofi/launchers/type-6/launcher.sh                               # Open rofi (graphicall app launcher)
-bind = $mainMod, SPACE, togglesplit                                       # Change windows split layout
+bind = $mainMod, TAB, exec, wofi                                          # Open wofi (graphicall app launcher)
+bind = $mainMod, J, togglesplit,                                          # Change windows split layout
 bind = ALT, PRINT, exec, hyprshot -m region --clipboard-only              # Make a screenshot
 bind = CTRL SHIFT, HOME, exec, pamixer --default-source -t                # Mute microphone
 bind = , XF86AudioMute, exec, pamixer --default-source -t && pamixer -t   # Mute headphones and microphone
-bind = $mainMod, ESCAPE, exec, wlogout                                    # Open wlogout (graphical power manager)
-bind = , XF86AudioPlay, exec, playerctl play-pause                        # Play/Pause media
+bind = $mainMod, ESCAPE, exec, wlogout
 
 
 ## Move focus with mainMod + arrow keys
@@ -133,16 +132,6 @@ bind = $mainMod, left, movefocus, l
 bind = $mainMod, right, movefocus, r
 bind = $mainMod, up, movefocus, u
 bind = $mainMod, down, movefocus, d
-
-
-## Scroll through existing workspaces with mainMod + scroll
-bind = $mainMod, mouse_down, workspace, e-1
-bind = $mainMod, mouse_up, workspace, e+1
-
-
-## Move/resize windows with mainMod + LMB/RMB and dragging
-bindm = $mainMod, mouse:272, movewindow
-bindm = $mainMod, mouse:273, resizewindow
 
 
 ## Switch workspaces with mainMod + [0-9]
@@ -158,7 +147,8 @@ bind = $mainMod, 9, workspace, 9
 bind = $mainMod, 0, workspace, 10
 
 
-## Move active window to a workspace with mainMod + SHIFT + [0-9]
+## Move active window to a workspace
+# With mainMod + SHIFT + [0-9]
 bind = $mainMod SHIFT, 1, movetoworkspace, 1
 bind = $mainMod SHIFT, 2, movetoworkspace, 2
 bind = $mainMod SHIFT, 3, movetoworkspace, 3
@@ -169,3 +159,17 @@ bind = $mainMod SHIFT, 7, movetoworkspace, 7
 bind = $mainMod SHIFT, 8, movetoworkspace, 8
 bind = $mainMod SHIFT, 9, movetoworkspace, 9
 bind = $mainMod SHIFT, 0, movetoworkspace, 10
+
+# With mainMod + SHIFT + scroll
+bind = $mainMod SHIFT, mouse_down, movetoworkspace, e-1
+bind = $mainMod SHIFT, mouse_up, movetoworkspace, e+1
+
+
+## Scroll through existing workspaces with mainMod + scroll
+bind = $mainMod, mouse_down, workspace, e-1
+bind = $mainMod, mouse_up, workspace, e+1
+
+
+## Move/resize windows with mainMod + LMB/RMB and dragging
+bindm = $mainMod, mouse:272, movewindow
+bindm = $mainMod, mouse:273, resizewindow
