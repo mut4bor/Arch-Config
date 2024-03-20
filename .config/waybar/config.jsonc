@@ -89,25 +89,24 @@
   "bluetooth": {
     "format": " {status}",
     "format-disabled": "",
-    "format-connected": " {num_connections}",
-    "tooltip-format": "{device_alias}",
-    "tooltip-format-connected": " {device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}"
+    "format-connected": " {num_connections}"
   },
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "tooltip": false,
     "format-muted": " Muted",
-    "on-click": "pamixer -t",
-    "on-click-right": "~/.config/waybar/scripts/toggleAudio.sh",
-    "on-scroll-up": "pamixer -i 5",
-    "on-scroll-down": "pamixer -d 5",
+    "on-click": "pamixer -t", // Mute output device
+    "on-click-right": "~/.config/waybar/scripts/nextAudio.py", // Next output device
+    "on-click-middle": "pavucontrol -t 3", // Open pavucontrol on "Output Devices tab" by clicking on mouse wheel
+    "on-scroll-up": "pamixer -i 5", // Increment output device volume
+    "on-scroll-down": "pamixer -d 5", // Decrement output device volume
     "scroll-step": 5,
     "format-icons": {
-      "alsa_output.pci-0000_30_00.4.analog-stereo": "", // My headphone device
-      "alsa_output.usb-Generic_BSX_USB_Audio_20210926172016-00.analog-stereo": "󰓃", // My speaker device
-      "default": ["", "", ""]
+      "alsa_output.pci-0000_30_00.4.analog-stereo": "", // My headphone device icon
+      "alsa_output.usb-Generic_BSX_USB_Audio_20210926172016-00.analog-stereo": "󰓃", // My speaker device icon
+      "": " ",
+      "default": ["", "", ""] // Default icons
     }
   },
 
@@ -116,7 +115,8 @@
     "tooltip": false,
     "format-source": "",
     "format-source-muted": "",
-    "on-click": "pamixer --default-source -t"
+    "on-click": "pamixer --default-source -t", // Microphone mute
+    "on-click-middle": "pavucontrol -t 4" // Open pavucontrol on "Input Devices tab" by clicking on mouse wheel
   },
 
   "hyprland/language": {
