@@ -1,0 +1,51 @@
+/* Check original repo for info https://github.com/ArtsyMacaw/wlogout?tab=readme-ov-file */
+
+* {
+  background-image: none;
+  box-shadow: none;
+  outline: none;
+}
+
+window {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+button {
+  border-radius: 0;
+  text-decoration-color: #ffffff;
+  color: #ffffff;
+  background-color: #1e1e2e;
+  border-style: solid;
+  border: 1px solid #595959;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
+
+button:focus,
+button:active,
+button:hover {
+  background-color: #2d2d46;
+}
+
+#shutdown {
+  border-left: none;
+  border-right: none;
+  background-image: image(
+    url('/usr/share/wlogout/icons/shutdown.png'),
+    url('/usr/local/share/wlogout/icons/shutdown.png')
+  );
+}
+
+#reboot {
+  background-image: image(
+    url('/usr/share/wlogout/icons/reboot.png'),
+    url('/usr/local/share/wlogout/icons/reboot.png')
+  );
+}
+#logout {
+  background-image: image(
+    url('/usr/share/wlogout/icons/logout.png'),
+    url('/usr/local/share/wlogout/icons/logout.png')
+  );
+}

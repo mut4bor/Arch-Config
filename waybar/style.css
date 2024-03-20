@@ -5,8 +5,8 @@
   font-weight: bold;
   font-size: 16px;
   min-height: 0;
-  box-shadow: none; /* Remove predefined box-shadow */
-  text-shadow: none; /* Remove predefined text-shadow */
+  box-shadow: none;
+  text-shadow: none;
 }
 
 window#waybar {
@@ -17,28 +17,28 @@ window#waybar {
 tooltip {
   background: #1e1e2e;
   border-radius: 10px;
-  text-shadow: none;
 }
 
-#custom-weather,
-#window,
 #clock,
-#pulseaudio,
-#bluetooth,
+#custom-weather,
 #workspaces,
+#window,
+#bluetooth,
+#pulseaudio,
+#language,
 #tray,
-#language {
+#custom-logout {
   background: #1e1e2e;
   opacity: 0.8;
   padding: 0px 10px;
   border: 1px solid #181825;
-  margin-top: 10px;
+  margin: 10px 0 0 10px;
+  border-radius: 10px;
 }
 
 #clock {
   color: #fab387;
   border-radius: 10px 0px 0px 10px;
-  margin-left: 10px;
   border-right: 0;
 }
 
@@ -51,7 +51,6 @@ tooltip {
 #workspaces {
   background: #1e1e2e;
   border-radius: 10px;
-  margin-left: 10px;
   padding: 0 5px;
 }
 
@@ -82,7 +81,6 @@ tooltip {
 #bluetooth {
   color: #89b4fa;
   border-radius: 10px;
-  margin-right: 10px;
 }
 
 #pulseaudio {
@@ -94,15 +92,19 @@ tooltip {
   color: #cba6f7;
   border-left: 0;
   border-radius: 0px 10px 10px 0px;
-  margin-right: 10px;
+  margin-left: 0;
 }
 
 #language {
   border-radius: 10px;
-  margin-right: 10px;
 }
 
 #tray {
   border-radius: 10px;
+}
+
+#custom-logout {
   margin-right: 10px;
+  padding: 0 11px 0 10px;
+  font-size: 20px;
 }
