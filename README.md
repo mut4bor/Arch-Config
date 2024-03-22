@@ -10,13 +10,15 @@ This is my Arch Hyprland config
 
 ## Packages
 
-- Hyprland
-- Waybar
-- sddm
-- rofi
-- dunst
-- kitty
-- fish
+- [Hyprland](https://wiki.archlinux.org/title/Hyprland)
+- [Sway](https://wiki.archlinux.org/title/Sway)
+- [Waybar](https://wiki.hyprland.org/Useful-Utilities/Status-Bars/#waybar)
+- [sddm](https://wiki.archlinux.org/title/SDDM)
+- [Rofi](https://wiki.archlinux.org/title/Rofi)
+- [dunst](https://wiki.archlinux.org/title/Dunst)
+- [kitty](https://wiki.archlinux.org/title/kitty)
+- [fish](https://wiki.archlinux.org/title/Fish)
+- [Dracula System and Icon Theme](https://draculatheme.com/gtk)
 
 ## Setup
 
