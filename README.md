@@ -27,7 +27,7 @@ This is my Arch Hyprland config
 ```
 git clone https://github.com/mut4bor/Arch-Config.git
 cd Arch-Config
-cp -r Arch-Config/.config/ ~/.config/
+cp -r .config/* ~/.config/
 ```
 
 #### Autologin Setup
