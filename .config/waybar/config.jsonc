@@ -55,8 +55,8 @@
     "tooltip": false,
     "format": "{}",
     "interval": 30,
-    "on-click": "gnome-weather",
-    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "on-click-middle": "gnome-weather",
+    "exec": "~/.config/waybar/scripts/weather.py",
     "return-type": "json"
   },
 
@@ -87,14 +87,20 @@
 
   // Modules right
   "bluetooth": {
+    "on-click-middle": "blueman-manager",
     "format": " {status}",
-    "format-disabled": "",
-    "format-connected": " {num_connections}"
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "Controller: {controller_alias} – {controller_address}\n\nDevices connected: {num_connections}",
+    "tooltip-format-connected": "Controller: {controller_alias} – {controller_address}\n\nDevices connected: {num_connections}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias} – {device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}% – {device_address}"
   },
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "tooltip": false,
+    "tooltip": true,
+    "tooltip-format": "pamixer --list-sinks",
     "format-muted": " Muted",
     "on-click": "pamixer -t", // Mute output device
     "on-click-right": "~/.config/waybar/scripts/nextAudio.py", // Next output device
@@ -105,7 +111,7 @@
     "format-icons": {
       "alsa_output.pci-0000_30_00.4.analog-stereo": "", // My headphone device icon
       "alsa_output.usb-Generic_BSX_USB_Audio_20210926172016-00.analog-stereo": "󰓃", // My speaker device icon
-      "": " ",
+      "bluez_output.84_94_37_70_C0_59.1": " ",
       "default": ["", "", ""] // Default icons
     }
   },

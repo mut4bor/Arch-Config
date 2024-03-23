@@ -36,7 +36,7 @@ Copy file to sddm custom config directory
 
 ```
 mkdir /etc/sddm.conf.d
-cp autologin.conf /etc/sddm.conf.d/
+cp other/autologin.conf /etc/sddm.conf.d/
 ```
 
 Change `User=mut4bor` to `User=yourusername`
@@ -48,7 +48,7 @@ doas nano /etc/sddm.conf.d/autologin.conf
 #### Default AirPods sound profile
 
 ```
-cp default.pa /etc/pulse/
+cp other/default.pa /etc/pulse/
 ```
 
 ## Screenshots

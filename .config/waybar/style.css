@@ -50,7 +50,6 @@ tooltip {
 
 #workspaces {
   background: #1e1e2e;
-  border-radius: 10px;
   padding: 0 5px;
 }
 
@@ -67,7 +66,7 @@ tooltip {
 }
 
 #workspaces button.focused {
-  color: #eba0ac;
+  color: #a6e3a1;
 }
 
 #workspaces button.urgent {
@@ -75,12 +74,10 @@ tooltip {
 }
 
 #window {
-  border-radius: 10px;
 }
 
 #bluetooth {
   color: #89b4fa;
-  border-radius: 10px;
 }
 
 #pulseaudio {
@@ -96,11 +93,9 @@ tooltip {
 }
 
 #language {
-  border-radius: 10px;
 }
 
 #tray {
-  border-radius: 10px;
 }
 
 #custom-logout {
