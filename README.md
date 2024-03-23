@@ -45,6 +45,12 @@ Change `User=mut4bor` to `User=yourusername`
 doas nano /etc/sddm.conf.d/autologin.conf
 ```
 
+#### Default AirPods sound profile
+
+```
+cp default.pa /etc/pulse/
+```
+
 ## Screenshots
 
 ![](screenshots/1.png)
